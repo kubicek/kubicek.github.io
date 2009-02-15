@@ -1,0 +1,37 @@
+body {
+  background-color: #eaf3fc;
+  padding: 10px;
+}
+h2 {
+  color: red;
+}
+#content {
+  float: left;
+  width: 870px;
+}
+ul {
+  padding: 20px;
+  padding-left: 50px;
+  margin-left: 20px;  
+}
+#content ul {
+  background-color: #badaf7;
+  width: 700px;
+}
+li.success { list-style-image: url(/images/tick.png) }
+li.failed { list-style-image: url(/images/stop.png) }
+li.unknown { list-style-image: url(/images/heart.png) }
+
+#resources ul {
+  padding-top: 0;
+}
+
+#resources li {
+  list-style: none;
+}
+
+#footer {
+  clear: both;
+  font-size: small;
+  text-align: center;
+}

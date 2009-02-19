@@ -20,7 +20,8 @@ ul {
 }
 li.success { list-style-image: url(/images/tick.png) }
 li.failed { list-style-image: url(/images/stop.png) }
-li.unknown { list-style-image: url(/images/heart.png) }
+li.lowe { list-style-image: url(/images/heart.png) }
+li.male { list-style-image: url(/images/male.png) }
 
 #resources ul {
   padding-top: 0;

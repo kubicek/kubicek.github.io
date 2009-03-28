@@ -1,13 +1,9 @@
 require 'rubygems'
-gem 'sinatra', '=0.3.2'
 require 'sinatra'
 
-ROOT_DIR = File.expand_path(File.dirname(__FILE__))
+Sinatra::Default.set(:run, false)
+Sinatra::Default.set(:env, ENV['RACK_ENV'])
+Sinatra::Default.set(:views, './views')
 
-Sinatra::Application.default_options.merge!(
-  :views    => File.join(ROOT_DIR, 'views'),
-  :app_file => File.join(ROOT_DIR, 'kubicek.rb'),
-  :run      => false
-)
-
-run Sinatra.application
+require 'kubicek'
+run Sinatra::Application

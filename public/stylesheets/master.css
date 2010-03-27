@@ -29,7 +29,7 @@ h1 a, #navbar a {
   color: #6e6e6e;
 }
 
-#navbar a#active {
+#navbar a.active {
   font-weight: bold;
 }
 

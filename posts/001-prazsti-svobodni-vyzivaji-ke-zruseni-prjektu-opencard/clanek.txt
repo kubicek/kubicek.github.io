@@ -1,0 +1,11 @@
+{{
+categories:
+  - praha
+  - opencard
+}}
+
+# Pražští Svobodní vyzývají ke zrušení projektu OpenCard
+
+Krajské předsednictvo Svobodných vyzývá Magistrát hlavního města Prahy, aby okamžitě ukončil projekt Opencard.
+
+<p><a href="http://www.svobodni.cz/article.aspx?articleid=786" class="article">Celý článek</a></p>

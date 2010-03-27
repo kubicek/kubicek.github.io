@@ -1,0 +1,5 @@
+<h2>Témata</h2>
+
+<% for category in @categories %>
+<h3><a href="/temata/<%=category.gsub(/ /,"-")%>"><%=category%></a></h3>
+<% end %>

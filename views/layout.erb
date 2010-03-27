@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>kubicek</title>
+  <link rel="stylesheet" href="/stylesheets/reset.css" />
+  <link rel="stylesheet" href="/stylesheets/text.css" />
+  <link rel="stylesheet" href="/stylesheets/960.css" />
+  <link rel="stylesheet" href="/stylesheets/master.css" />
+
+</head>
+
+<body id="kubicek" onload="">
+
+<div class="container_12" id="header">
+	<div class="grid_4">&nbsp;</div>
+  <div class="grid_4"><img src="/images/Full_Banner.png"></div>
+  <div class="clear"></div>
+  <div class="grid_2">&nbsp;</div>
+  <div class="grid_10"<h1><a href="/">Ing. Jiří <span id="last_name">Kubíček</span></a></h1></div>
+	<div class="clear"></div>
+</div>
+
+<div class="container_12" id="navbar">
+  <div id="top">&nbsp;</div>
+	<div class="grid_2">&nbsp;</div>
+  <ul>  
+    <li class="grid_2"><a href="/" id="active">Úvod</a></li>
+    <li class="grid_2"><a href="/kdo-jsem">Kdo jsem</a></li>  
+    <li class="grid_2"><a href="/temata">Témata</a></li>  
+    <li class="grid_2"><a href="http://www.svobodni.cz/media/fotogalerie/49-jiri-kubicek/">Galerie</a></li>  
+    <li class="grid_2"><a href="/kontakt">Kontakt</a></li>  
+	</ul>
+	<!-- end .grid_9 -->
+	<div class="clear"></div>
+</div>
+
+<div class="container_12" id="content">
+
+	<div class="grid_7" id="main">
+	  <%= yield%>
+	</div>
+  <!-- <div class="grid_1">&nbsp;</div> -->
+	<div class="grid_4" id="sidebar">
+		<a href="http://cs-cz.facebook.com/people/Jiri-Kubicek/813449853"><img src="/images/facebook.png" />
+		<a href="http://www.twitter.com/kubicek"><img src="/images/twitter.png" />
+		<a href="http://www.svobodni.cz"><img src="/images/low-q3.png" /></a>
+	</div>
+	<!-- end .grid_8 -->
+	<div class="clear"></div>
+
+  <div id="footer">&copy; Jiří Kubíček, 2010</div>
+
+</div>
+<!-- end .container_12 -->
+
+</body>
+</html>

@@ -1,38 +1,98 @@
 body {
-  background-color: #eaf3fc;
-  padding: 10px;
+  font-family: Georgia, serif;
+  background: #123;
+  border-top: 5px solid #000;
+  font-size: 0.9em;
+  padding: 20px 0 40px;
 }
+
+h1 {
+  font-weight: normal;
+  text-align: right;
+  font-size: 4em;
+  height: 81px;
+  padding-top: 70px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+}
+
+h1 a, #navbar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#content a {
+  color: #000;
+}
+
+#content a:hover {
+  color: #6e6e6e;
+}
+
+#navbar a#active {
+  font-weight: bold;
+}
+
+#navbar {
+  background: #000;
+}
+
+h1 a:hover, #navbar a:hover {
+  text-decoration: underline;
+}
+
 h2 {
-  color: red;
-}
-#content {
-  float: left;
-  width: 870px;
-}
-ul {
-  padding: 20px;
-  padding-left: 50px;
-  margin-left: 20px;  
-}
-#content ul {
-  background-color: #badaf7;
-  width: 700px;
-}
-li.success { list-style-image: url(/images/tick.png) }
-li.failed { list-style-image: url(/images/stop.png) }
-li.lowe { list-style-image: url(/images/heart.png) }
-li.male { list-style-image: url(/images/male.png) }
-
-#resources ul {
-  padding-top: 0;
+  font-size: 3em;
 }
 
-#resources li {
+#navbar ul {
   list-style: none;
+  display: block;
 }
 
-#footer {
-  clear: both;
-  font-size: small;
+#navbar li {
+  float: left;
+  font-size: 2em;
   text-align: center;
+}
+
+#navbar div#top {
+  background: #ff0;
+}
+
+div#footer {
+  background: #000;
+  text-align: center;
+  color: #fff;
+}
+
+a.article {
+  font-weight: bold;
+}
+
+div#sidebar {
+  padding: 40px 0px 40px 50px;
+}
+
+div#sidebar ul {
+  margin-top: 30px;
+}
+
+.container_12#content {
+	background-color: #fff;
+	margin-bottom: 20px;
+}
+
+#content div#main {
+  padding-top: 30px;
+  padding-left: 30px;
+}
+
+div#header {
+  background-image: url(/images/kubicek-orez.png);
+  background-repeat: no-repeat;
+}
+
+h3 {
+  margin-bottom: 5px;
 }

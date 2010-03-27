@@ -2,7 +2,7 @@ require "rubygems"
 require "sinatra"
 require "lib/post"
 require "lib/category"
-# require "rdiscount"
+require "rdiscount"
 
 get "/kdo-jsem/?" do
   erb :about

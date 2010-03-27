@@ -1,6 +1,7 @@
 require "rubygems"
 require "sinatra"
 require "lib/post"
+require "lib/category"
 # require "rdiscount"
 
 get "/kdo-jsem/?" do
@@ -8,7 +9,7 @@ get "/kdo-jsem/?" do
 end
 
 get "/temata/?" do
-  @categories = Marley::Post.categories
+  @categories = Category.all
   erb :categories
 end
 

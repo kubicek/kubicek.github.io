@@ -35,10 +35,6 @@ module Marley
 
     end
     
-    def self.categories
-      find_all.collect{|post| post.categories}.flatten.uniq
-    end
-
     def self.find_all_by_category(category)
       find_all.select{|post| post.categories.include?(category)}
     end

@@ -13,7 +13,7 @@ class Category
   def self.all
     {
       "podnikani"=>"Podnikání",
-      # "praha-7"=>"Praha 7",
+      "praha-7"=>"Praha 7",
       "praha"=>"Praha",
       "opencard"=>"OpenCard"
     }.collect{|category| Category.new(:slug=>category[0], :name=>category[1]) }

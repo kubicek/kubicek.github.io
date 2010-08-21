@@ -26,6 +26,12 @@ get "/clanky/:post_id.html" do
   erb :post
 end
 
+get "/clanky/:post_id/:filename" do
+  directory = Dir['posts/*'].select { |dir| dir =~ Regexp.new("\\d\\d\\d\-#{Regexp.escape(params[:post_id])}\$") }.first
+  file = Dir[File.join(directory,params[:filename])].first
+  send_file(file)
+end
+
 get "/galerie/?" do
   erb :gallery
 end

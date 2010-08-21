@@ -3,6 +3,7 @@ require "sinatra"
 require "lib/post"
 require "lib/category"
 require "rdiscount"
+require "yaml"
 
 get "/kdo-jsem/?" do
   erb :about

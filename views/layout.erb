@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://opengraphprotocol.org/schema/">
 <head>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-  <title><%=@page_title%> Ing. Jiří Kubíček - Strana svobodných občanů</title>
+  <title><%=@page_title ? "#{@page_title} : " : ""%> Ing. Jiří Kubíček - Strana svobodných občanů</title>
   <link rel="stylesheet" href="/stylesheets/reset.css" />
   <link rel="stylesheet" href="/stylesheets/text.css" />
   <link rel="stylesheet" href="/stylesheets/960.css" />
@@ -56,13 +56,15 @@
 <div class="container_12" id="content">
 
 	<div class="grid_7" id="main">
+	  <h2><%=@page_title%></h2>
 	  <%= yield%>
 	</div>
   <!-- <div class="grid_1">&nbsp;</div> -->
 	<div class="grid_4" id="sidebar">
 		<a href="http://www.facebook.com/pages/Jiri-Kubicek/128068469233"><img src="/images/facebook.png" alt="Facebook logo"/></a>
 		<a href="http://www.twitter.com/kubicek"><img src="/images/twitter.png" alt="Twitter logo" /></a>
-		<script type="text/javascript" src="http://static.ak.connect.facebook.com/connect.php/cs_CZ"></script><script type="text/javascript">FB.init("86dc8b1be7f83c674411457a65dea34c");</script><fb:fan profile_id="128068469233" stream="1" connections="10" logobar="0" width="300"></fb:fan><div style="font-size:8px; padding-left:10px"><a href="http://www.facebook.com/pages/Jiri-Kubicek/128068469233">Jiří Kubíček</a> on Facebook</div>
+    <!-- <script type="text/javascript" src="http://static.ak.connect.facebook.com/connect.php/cs_CZ"></script><script type="text/javascript">FB.init("86dc8b1be7f83c674411457a65dea34c");</script>-->
+    <fb:fan profile_id="128068469233" stream="1" connections="10" logobar="0" width="300"></fb:fan><div style="font-size:8px; padding-left:10px"><a href="http://www.facebook.com/pages/Jiri-Kubicek/128068469233">Jiří Kubíček</a> on Facebook</div>
     <!-- <script src="http://widgets.twimg.com/j/2/widget.js"></script>
     <script>
     new TWTR.Widget({

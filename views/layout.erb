@@ -11,11 +11,13 @@
   <meta property="og:title" content="<%=@page_title%>"/>
   <meta property="og:type" content="blog"/>
   <meta property="og:url" content="<%=request.url%>"/>
-  <meta property="og:image" content="http://sphotos.ak.fbcdn.net/hphotos-ak-snc3/hs417.snc3/25118_375386489233_128068469233_3737548_7832748_n.jpg"/>
+  <meta property="og:image" content="http://www.kubicek.cz/images/20090821_0783.jpg"/>
   <meta property="og:site_name" content="Ing. Jiří Kubíček - Osobní stránky"/>
   <meta property="fb:admins" content="813449853"/>
   <meta property="fb:app_id" content="153517771344555" />
-  <meta property="og:description" content="Osobní stránky Jiřího Kubíčka" />
+  <% if @post %>
+  <meta property="og:description" content="<%=@post.perex%>" />
+  <% end %>
 </head>
 
 <body id="kubicek" onload="">

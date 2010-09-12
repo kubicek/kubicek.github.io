@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="/stylesheets/960.css" />
   <link rel="stylesheet" href="/stylesheets/master.css" />
   <meta property="og:title" content="<%=@page_title%>"/>
-  <meta property="og:type" content="article"/>
+  <meta property="og:type" content="<%=@og_type ? @og_type : "website"%>"/>
   <meta property="og:url" content="<%=request.url%>"/>
   <meta property="og:image" content="http://www.kubicek.cz/images/20090821_0783.jpg"/>
   <meta property="og:site_name" content="Ing. Jiří Kubíček - Osobní stránky"/>

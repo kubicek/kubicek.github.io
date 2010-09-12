@@ -18,6 +18,7 @@ get "/temata/:category_id" do
   @posts = Marley::Post.find_all_by_category(params[:category_id])
   throw :halt, [404, not_found ] unless @posts
   @page_title=Category.find(params[:category_id]).name
+  @og_type="blog"
   erb :posts
 end
 
@@ -26,6 +27,7 @@ get "/clanky/:post_id.html" do
   throw :halt, [404, not_found ] unless @post
   @post=Marley::Post.new(Marley::Post.extract_post_info_from(@post))
   @page_title=@post.title
+  @og_type="article"
   erb :post
 end
 

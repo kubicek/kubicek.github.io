@@ -1,4 +1,4 @@
 <% for post in @posts%>
 <h3><a href="<%=post.permalink%>" class="article"><%=post.title%></a></h3>
-<p><%=post.perex%> <a href="<%=post.permalink%>" class="article">Celý článek</a></p>
+<p><%=post.perex_html%> <a href="<%=post.permalink%>" class="article">Celý článek</a></p>
 <% end %>

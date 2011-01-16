@@ -12,7 +12,7 @@ module Marley
 
   class Post
   
-    attr_reader :id, :title, :perex, :body, :body_html, :meta, :published_on, :updated_on, :published
+    attr_reader :id, :title, :perex, :perex_html, :body, :body_html, :meta, :published_on, :updated_on, :published
   
     def initialize(options={})
       options.each_pair { |key, value| instance_variable_set("@#{key}", value) if self.respond_to? key }
@@ -92,6 +92,7 @@ module Marley
       file_content  = File.read(file)
       meta_content  = file_content.slice!( self.regexp[:meta] )
       body          = file_content.sub( self.regexp[:title], '').sub( self.regexp[:perex], '').strip
+      perex         = file_content.scan( self.regexp[:perex] ).first.to_s.strip
       post          = Hash.new
 
       post[:id]           = dirname.sub(self.regexp[:id], '\1').sub(/\.draft$/, '')
@@ -99,8 +100,9 @@ module Marley
       post[:title]        = file_content.scan( self.regexp[:title] ).first.to_s.strip if post[:title].nil?
       post[:published_on] = DateTime.parse( post[:published_on] ) rescue File.mtime( File.dirname(file) )
 
-      post[:perex]        = file_content.scan( self.regexp[:perex] ).first.to_s.strip unless options[:except].include? 'perex' or
+      post[:perex]        = perex                                                     unless options[:except].include? 'perex' or
                                                                                       not options[:only].include? 'perex'
+      post[:perex_html]   = RDiscount::new( perex ).to_html                           unless options[:except].include? 'perex_html' or not options[:only].include? 'perex_html'
       post[:body]         = body                                                      unless options[:except].include? 'body' or
                                                                                       not options[:only].include? 'body'
       post[:body_html]    = RDiscount::new( body ).to_html                            unless options[:except].include? 'body_html' or

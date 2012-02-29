@@ -20,8 +20,7 @@ class Category
   end
 
   def self.find(id)
-    category = all.detect{|key,value| key==id}
-    category ? Category.new(:slug=>id, :name=>category[1]) : nil
+    all.detect{|category| category.slug==id}
   end
 
 end

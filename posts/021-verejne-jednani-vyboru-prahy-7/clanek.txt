@@ -3,7 +3,7 @@ categories:
   - praha-7
 }}
 
-# Veřejné jednání výborů zastupitelstva MČ Praha 7
+# Veřejné jednání výborů zastupitelstva MČ Praha&nbsp;7
 
 Žádost o projednání
 
